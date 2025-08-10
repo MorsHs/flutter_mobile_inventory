@@ -13,10 +13,10 @@ class Home extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
-            spacing: 2,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('${month[DateTime.now().month-1]} Report', style: TextStyle(fontSize: 23,fontWeight: FontWeight.w700)),
+              Text('${month[DateTime.now().month-1]}', style: TextStyle(fontSize: 23,fontWeight: FontWeight.w700)),
+              Text(DateTime.now().year.toString(),style: TextStyle(fontSize: 23,fontWeight: FontWeight.w700),),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: GridViewBuildReportContainer(),

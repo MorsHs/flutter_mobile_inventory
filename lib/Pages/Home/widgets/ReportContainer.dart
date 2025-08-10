@@ -28,9 +28,9 @@ class _ReportContainerState extends State<ReportContainer> {
           Icon(widget.iconData, color: Colors.black38.withAlpha(100), size: 40),
           Text(
             widget.name,
-            style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
+            style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300,),
           ),
-          Text('15'),
+          Text('15',style: TextStyle(fontWeight: FontWeight.w300,fontSize: 17),),
         ],
       ),
     );
