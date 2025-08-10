@@ -24,6 +24,7 @@ class _BottomnavbarState extends State<Bottomnavbar> {
   @override
   Widget build(BuildContext context) {
     return NavigationBar(
+      backgroundColor: Colors.teal,
       onDestinationSelected:
           (value) => setState(() {
             index = value;
