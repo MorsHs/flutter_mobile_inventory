@@ -14,6 +14,7 @@ Size get preferredSize => const Size.fromHeight(kToolbarHeight);
     final router_title = GoRouter.of(context).state.name.toString(); // Kuhaon ra ang name sa current router name
 
     return AppBar(
+      elevation: 8,
       titleTextStyle: TextStyle(color: Colors.white,fontSize: 20),
       backgroundColor: Colors.teal,
       title: Text(router_title),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobile_inventory/Pages/Inventory/widget/ItemContainer.dart';
+import 'package:flutter_mobile_inventory/Pages/Item%20Catalog/widgets/ItemContainer.dart';
+
 
 class GridViewBuildItemContainer extends StatelessWidget {
   const GridViewBuildItemContainer({super.key});
