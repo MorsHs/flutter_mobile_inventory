@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ItemContainer extends StatelessWidget {
   const ItemContainer({super.key});
-  // TODO Make this responsive
   @override
   Widget build(BuildContext context) {
     return Card(
