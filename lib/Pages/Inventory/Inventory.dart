@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:data_table_2/data_table_2.dart';
+import 'package:flutter_mobile_inventory/Pages/Inventory/widget/CustomInventorySearchBar.dart';
+import 'package:flutter_mobile_inventory/Pages/Inventory/widget/DataTable.dart';
 
 class Inventory extends StatelessWidget {
   const Inventory({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<String> colName = ['Category', 'Quantity'];
+
 
     return Scaffold(
       body: SafeArea(
-        child: DataTable2(
-          columns: List.generate(
-            colName.length,
-                (index) => DataColumn2(label: Text(colName[index])),
-          ),
-          rows: [],
-        ),
+        child:Column(
+          spacing: 3,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: CustomInventorySearchBar(),
+            ),
+            Expanded(child: CustomDataTable2()),
+          ],
+        )
       ),
     );
   }

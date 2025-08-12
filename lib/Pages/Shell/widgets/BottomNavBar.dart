@@ -16,8 +16,8 @@ class _BottomnavbarState extends State<Bottomnavbar> {
     NavigationDestination(icon: Icon(Icons.inventory), label: 'Inventory'),
     NavigationDestination(icon: Icon(Icons.book), label: 'Item Catalog'),
     NavigationDestination(
-      icon: Icon(Icons.auto_awesome_mosaic),
-      label: 'Export',
+      icon: Icon(Icons.local_shipping),
+      label: 'Released',
     ),
   ];
 
@@ -40,7 +40,7 @@ class _BottomnavbarState extends State<Bottomnavbar> {
                 context.go('/catalog');
                 break;
               case 3:
-                context.go('/export');
+                context.go('/released');
                 break;
             }
           }),
