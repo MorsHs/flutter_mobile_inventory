@@ -15,7 +15,7 @@ class GridViewBuildItemContainer extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: 5,
           crossAxisSpacing: 5,
-          childAspectRatio: 0.75
+          childAspectRatio: 0.65
             //ChildAspectRatio = 1 (perfect square)
             // '' < 1 (Taller)
             // '' > 1 (wider like banners)

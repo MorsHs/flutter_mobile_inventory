@@ -3,40 +3,43 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ItemContainer extends StatelessWidget {
   const ItemContainer({super.key});
+
   @override
   Widget build(BuildContext context) {
+    final double imageHeight = MediaQuery.of(context).size.height * 0.15;
+
     return Card(
       child: Column(
+        mainAxisSize: MainAxisSize.min, // Wrap content vertically
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(8)),
             child: Image.asset(
               'assets/images/landscape.jpg',
-              height: 122,
+              height: imageHeight.clamp(100, 150),
               fit: BoxFit.cover,
             ),
           ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'A LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOONG TEXT',
-                    maxLines:
-                        2, // Maxlines is literal lines it can contain on a set value sa width sa parent
-                    style: GoogleFonts.poppins(
-                      textStyle: TextStyle(overflow: TextOverflow.ellipsis),
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text('Po No. : 123654', style: description()),
-                  Text('Pr No. : 54412', style: description()),
-                  Text('ICS No. : 988556', style: description()),
-                ],
-              ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+            child: Column(
+              mainAxisSize: MainAxisSize.min, // Wrap content vertically
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'A LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOONG TEXT',
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.poppins(fontSize: 14),
+                ),
+                const SizedBox(height: 4),
+                const Text('Category : Monitor'),
+                const Text('Date Added : 12/23/2002'),
+                Text('Po No. : 123654', style: description()),
+                Text('Pr No. : 54412', style: description()),
+                Text('ICS No. : 988556', style: description()),
+              ],
             ),
           ),
         ],
@@ -47,7 +50,7 @@ class ItemContainer extends StatelessWidget {
   TextStyle description() {
     return GoogleFonts.poppins(
       letterSpacing: 0.3,
-      textStyle: TextStyle(overflow: TextOverflow.ellipsis),
+      textStyle: const TextStyle(overflow: TextOverflow.ellipsis),
     );
   }
 }

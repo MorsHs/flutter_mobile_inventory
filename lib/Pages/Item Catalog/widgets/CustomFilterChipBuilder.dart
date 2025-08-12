@@ -40,6 +40,6 @@ class _CustomFilterChipBuilderState extends State<CustomFilterChipBuilder> {
   }
 
   List<String> filterText() {
-    return ['Po No.', 'Pr No.', 'ICS No.'];
+    return ['Category','Po No.', 'Pr No.', 'ICS No.'];
   }
 }
