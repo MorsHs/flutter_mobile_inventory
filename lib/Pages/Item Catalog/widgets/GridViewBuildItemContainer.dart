@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobile_inventory/Pages/Item%20Catalog/widgets/ItemContainer.dart';
+import 'package:flutter_mobile_inventory/Pages/Item%20Catalog/widgets/TestContainer.dart';
 
 
 class GridViewBuildItemContainer extends StatelessWidget {
@@ -15,7 +16,7 @@ class GridViewBuildItemContainer extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: 5,
           crossAxisSpacing: 5,
-          childAspectRatio: 0.65
+            mainAxisExtent: 310
             //ChildAspectRatio = 1 (perfect square)
             // '' < 1 (Taller)
             // '' > 1 (wider like banners)
