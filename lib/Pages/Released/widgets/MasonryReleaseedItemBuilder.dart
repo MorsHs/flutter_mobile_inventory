@@ -8,10 +8,15 @@ class MasonryReleaseedItemBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final items = List.generate(9, (_) => ItemContainer());
-    return MasonryGridView.count(
-      itemCount: items.length,
-      crossAxisCount: 2,
-      itemBuilder: (context, index) => items[index],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: MasonryGridView.count(
+        itemCount: items.length,
+        crossAxisCount: 2,
+        mainAxisSpacing: 8,
+        crossAxisSpacing: 8,
+        itemBuilder: (context, index) => items[index],
+      ),
     );
   }
 }
